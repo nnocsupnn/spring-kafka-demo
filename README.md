@@ -1,7 +1,22 @@
 # Apache Kafka with Spring Boot
 > Features
-> - Apache Avro [https://avro.apache.org/docs/1.11.1/specification/]
->  for Schema validation
+> - [Apache Avro](https://avro.apache.org/docs/1.11.1/specification/) for the data validation
+
+Sample Avro schema:
+```avroschema
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "com.nnocsupnn",
+  "version": "1",
+  "fields": [
+    { "name": "id", "type": "string", "doc": "Id of the user" },
+    { "name": "name", "type": "string", "doc": "name of the user" },
+    { "name": "email", "type": "string", "doc": "email of the user" }
+  ]
+}
+```
+
 
 # Setup
 Avro Schema is define and created under `resources` folder under (<i>.avsc</i>) file type.
