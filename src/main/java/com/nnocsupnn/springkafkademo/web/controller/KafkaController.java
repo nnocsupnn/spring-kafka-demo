@@ -17,4 +17,10 @@ public class KafkaController {
         producer.sendMessage("test-topic", message);
         return "Message sent to Kafka!";
     }
+
+    @PostMapping("/publish-avro")
+    public String sendAvroMessage(@RequestParam String message) {
+        producer.sendAvroMessage();
+        return "Message sent to Kafka!";
+    }
 }
